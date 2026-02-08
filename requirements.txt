@@ -1,0 +1,27 @@
+# Wideband Branchline Balun Design Application
+# Core Framework
+streamlit>=1.28.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Visualization
+matplotlib>=3.7.0
+plotly>=5.17.0
+
+# Data Handling
+pandas>=2.0.0
+
+# Report Generation
+reportlab>=4.0.0
+
+# Utilities
+python-dateutil>=2.8.0
+
+# Layout
+gdspy>=1.6.13
+ezdxf>=1.1.0

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: ahamednazeer/wideband-branchline-balun:0.1
+    container_name: wideband-balun-app
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PORT=8501
