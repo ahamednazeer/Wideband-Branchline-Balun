@@ -273,6 +273,22 @@ def plot_layout(dimensions: Dict, num_stages: int = 1,
         font=dict(size=10)
     )
     
+    # Add invisible scatter trace to force correct axes range
+    # because fig.add_shape does not automatically update layout bounds
+    x_min = -6
+    x_max = total_width + 6
+    y_min = -series_w - 6
+    y_max = shunt_l + shunt_w/2 + series_w + 5
+    
+    fig.add_trace(go.Scatter(
+        x=[x_min, x_max, x_max, x_min],
+        y=[y_min, y_min, y_max, y_max],
+        mode='markers',
+        marker=dict(color='rgba(0,0,0,0)', size=1),
+        showlegend=False,
+        hoverinfo='skip'
+    ))
+    
     fig.update_layout(
         title=dict(text=title, x=0.5),
         template="plotly",
