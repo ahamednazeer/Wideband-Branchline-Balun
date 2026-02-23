@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: ahamednazeer/wideband-branchline-balun:0.1
+    image: ahamednazeer/wideband-branchline-balun:0.1-amd
     container_name: wideband-balun-app
     ports:
       - "8501:8501"
